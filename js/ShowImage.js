@@ -1,18 +1,18 @@
 $(document).on("click", ".browse", function() {
-  var file = $(this)
-    .parents()
-    .find(".file");
-  file.trigger("click");
+  var f = $("#fileHidden");
+
+  f.trigger("click");
+  verImagen(f);
 });
-$('input[type="file"]').change(function(e) {
-  var fileName = e.target.files[0].name;
-  $("#file").val(fileName);
+
+function verImagen(input) {
+  $("#file").val(input.val());
 
   var reader = new FileReader();
   reader.onload = function(e) {
     // get loaded data and render thumbnail.
-    document.getElementById("preview").src = e.target.result;
+    $("#preview").src = e.target.result;
   };
   // read the image file as a data URL.
-  reader.readAsDataURL(this.files[0]);
-});
+  reader.readAsDataURL($("#fileHidden")[0].files[0]);
+}
