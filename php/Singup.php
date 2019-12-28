@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <h5 class="card-title text-center">Registro</h5>
                     <div class="card-title">
-                        <form id="myForm" action="Singup.php" method="post" enctype="multipart/form-data">
+                        <form id="myForm" method="post" action="Singup.php" role="form">
                             <div class="form-group">
                                 <label for="dirCorreo">Email</label>
                                 <input type="email" class="form-control" id="dirCorreo" placeholder="correo@ejemplo.com">
@@ -33,7 +33,7 @@
                                     <input type="text" class="form-control" id="user" placeholder="jackDorsey76">
                                 </div>
                             </div>
-                            <div class="form-group ">
+                            <!-- <div class="form-group ">
                                 <input type="file" id="fileHidden" hidden class="file" accept="image/*">
                                 <div class="input-group my-3">
                                     <input type="text" class="form-control" disabled placeholder="Selecciona foto" id="file">
@@ -44,7 +44,7 @@
                                 <div class="text-center">
                                     <img src="https://placehold.it/80x80" id="preview" class="img-thumbnail">
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- <div class="text-center mb-2">
                                 <button type="submit" id="submit" class="btn btn-primary">Submit</button>
                             </div> -->
