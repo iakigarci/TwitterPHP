@@ -1,13 +1,42 @@
 <nav class="navbar">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-        <a href="" title=""><i style="margin-right: 0.5em; color: #EEEEEE;" class="icon-home icon-4x"></i>Website Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link 2</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link 3</a>
-        </li>
-    </ul>
+    <div class="container">
+        <div class="row">
+            <div class="span3 well">
+                <a href="#aboutModal" data-toggle="modal"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" class="img-circle"></a>
+                <h3>Joe Sixpack</h3>
+                <em>click my face for more</em>
+                <p>By the way,<br><a target="_blank" href="http://bootsnipp.com/TXTCLASS/snippets/25zz">there's a fresh 3.1.0 version ready</a></p>
+                <div class="modal hide" id="aboutModal">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">✕</button>
+                        <h3>About Joe</h3>
+                    </div>
+                    <div class="modal-body" style="text-align:center;">
+                        <div class="row-fluid">
+                            <div class="span10 offset1">
+                                <div id="modalTab">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="about">
+                                            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                                            <h3 class="media-heading">Joe Sixpack <small> USA</small></h3>
+                                            <span><strong>Skills: </strong></span>
+                                            <span class="label label-warning">HTML5/CSS</span>
+                                            <span class="label label-info">Adobe CS 5.5</span>
+                                            <span class="label label-info">Microsoft Office</span>
+                                            <span class="label label-success">Windows XP, Vista, 7</span>
+                                            <hr>
+                                            <p class="text-left"><strong>Bio: </strong><br>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem dui, tempor sit amet commodo a, vulputate vel tellus.</p>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 </nav>
