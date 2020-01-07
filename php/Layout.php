@@ -17,9 +17,7 @@
             </div>
 
             <div class="col-md-6">
-                <div class="card">
-                    <h1>sd</h1>
-                </div>
+                
             </div>
 
             <div class="col-md-3">

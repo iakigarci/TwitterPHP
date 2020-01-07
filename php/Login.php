@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,11 +16,11 @@
                         <form id="myForm">
                             <div class="form-group">
                                 <label for="dirCorreo">Email address</label>
-                                <input type="email" class="form-control" id="dirCorreo" aria-describedby="emailHelp">
+                                <input type="email" class="form-control" id="dirCorreo" name="dirCorreo" aria-describedby="emailHelp">
                             </div>
                             <div class="form-group">
                                 <label for="pass">Password</label>
-                                <input type="password" class="form-control" id="pass">
+                                <input type="password" class="form-control" id="pass" name="pass">
                             </div>
                             <div class="form-group form-check">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -32,7 +33,7 @@
                                 <a href="../php/Singup.php">No tengo cuenta</a>
                             </div>
                         </form>
-                        <div class="errores" style="color:red; backgroud-color: #ff9999 ">
+                        <div class="errores" style="color:red; background-color: #ff9999 ">
                             <?php
                             if (isset($_REQUEST['dirCorreo'])) {
                                 include 'DBConfig.php';
@@ -51,14 +52,17 @@
                                     die("Error: " . mysqli_error($mysqli));
                                 }
                                 $row = mysqli_fetch_array($resultado);
-                                if (($row['email'] == $email) and (hash_equals($row['pass'], crypt($pass, $row['pass'])))) {
+                                printf($pass);
+                                $crypt = crypt($pass, $row['pass']);
+                                print_r($crypt);
+                                if (hash_equals($row['pass'], crypt($pass, $row['pass']))) {
                                     session_start();
                                     $_SESSION['identificado'] = "SI";
                                     $_SESSION['email'] = $row['email'];
 
                                     echo "<script>
                                         alert('Inicio de sesion realizado correctamente. Pulsa aceptar para acceder a la pantalla principal.');
-                                        window.location.href='IncreaseGlobalCounter.php';
+                                        window.location.href='Layout.php';
                                         </script>";
                                 } else {
                                     echo "Este usuario no tiene permitido acceder. <br>";
