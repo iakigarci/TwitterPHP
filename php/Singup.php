@@ -109,11 +109,11 @@
                                 $resul->close();
                             }
 
-                            $nombreApellidos = $_REQUEST['nombreApellidos'];
-                            $pass = $_REQUEST['pass'];
-                            $user = $_REQUEST['user'];
+                            $nombreApellidos = strip_tags($_REQUEST['nombreApellidos']);
+                            $pass = strip_tags($_REQUEST['pass']);
+                            $user = strip_tags($_REQUEST['user']);
                             $date = date('Y-m-d H:i:s');
-                            $biografia = $_REQUEST['biografia'];
+                            $biografia = strip_tags($_REQUEST['biografia']);
                             $hashed_password = password_hash($pass, PASSWORD_DEFAULT);
                             if ($_FILES['fileHidden']['name'] == "") {
                                 $image = "../images/cuentaHuevo.png";

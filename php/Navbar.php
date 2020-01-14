@@ -1,1 +1,1 @@
-<?php include "../php/UserInfo.php?email=garcia@gmail.com" ?>
+<?php include '../php/UserInfo.php'; ?>

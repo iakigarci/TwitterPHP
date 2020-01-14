@@ -1,4 +1,4 @@
-<?php session_start();?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +13,7 @@
                 <div class="card my-5">
                     <div class="card-body">
                         <h5 class="card-title text-center">Log In</h5>
-                        <form id="myForm">
+                        <form id="myForm" method="POST">
                             <div class="form-group">
                                 <label for="dirCorreo">Email address</label>
                                 <input type="email" class="form-control" id="dirCorreo" name="dirCorreo" aria-describedby="emailHelp">
@@ -52,20 +52,15 @@
                                     die("Error: " . mysqli_error($mysqli));
                                 }
                                 $row = mysqli_fetch_array($resultado);
-                                printf($pass);
-                                $crypt = crypt($pass, $row['pass']);
-                                print_r($crypt);
                                 if (hash_equals($row['pass'], crypt($pass, $row['pass']))) {
                                     session_start();
                                     $_SESSION['identificado'] = "SI";
                                     $_SESSION['email'] = $row['email'];
-
                                     echo "<script>
                                         alert('Inicio de sesion realizado correctamente. Pulsa aceptar para acceder a la pantalla principal.');
                                         window.location.href='Layout.php';
                                         </script>";
                                 } else {
-                                    echo "Este usuario no tiene permitido acceder. <br>";
                                     $_SESSION['identificado'] = "NO";
                                     echo "Usuario o contraseña incorrectos, prueba de nuevo. <br>";
                                     echo '<script type="text/JavaScript">  

@@ -17,7 +17,9 @@
             </div>
 
             <div class="col-md-6">
-                
+                <div class="card">
+                    <?php include '../php/Main.php' ?>
+                </div>
             </div>
 
             <div class="col-md-3">
