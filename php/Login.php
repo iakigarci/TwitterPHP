@@ -44,7 +44,8 @@
                                 }
                                 $email = $_REQUEST['dirCorreo'];
                                 $pass = $_REQUEST['pass'];
-
+                                // Se añade el salto de página y se encripta mal
+                                $pass = substr_replace(md5($pass), "", -2);
                                 $sql = "SELECT * FROM usuarios WHERE email='$email';";
 
                                 $resultado = mysqli_query($mysqli, $sql, MYSQLI_USE_RESULT);
@@ -52,10 +53,14 @@
                                     die("Error: " . mysqli_error($mysqli));
                                 }
                                 $row = mysqli_fetch_array($resultado);
-                                if (hash_equals($row['pass'], crypt($pass, $row['pass']))) {
+                                $mysqli->close();
+                                if ($row['pass'] == $pass) {
                                     session_start();
                                     $_SESSION['identificado'] = "SI";
                                     $_SESSION['email'] = $row['email'];
+                                    $_SESSION['nombre'] = $row['nombre_apellidos'];
+                                    $_SESSION['user'] = "@".$row['user']."";
+                                    $_SESSION['biografia'] = $row['biografia'];
                                     echo "<script>
                                         alert('Inicio de sesion realizado correctamente. Pulsa aceptar para acceder a la pantalla principal.');
                                         window.location.href='Layout.php';

@@ -94,12 +94,7 @@
                         function introducirUsuario()
                         {
                             $errorCorreo = "El correo introducido ya está registrado";
-                            include 'DbConfig.php';
-                            //Creamos la conexion con la BD.
-                            $mysqli = mysqli_connect($server, $user, $pass, $basededatos);
-                            if (!$mysqli) {
-                                die("Fallo al conectar a MySQL: " . mysqli_connect_error());
-                            }
+                            include 'ConnectionDB.php';
                             $email = $_REQUEST['dirCorreo'];
                             if ($resul = $mysqli->query("SELECT * FROM usuarios WHERE email='$email'")) {
                                 $row_cnt = $resul->num_rows;
@@ -111,10 +106,10 @@
 
                             $nombreApellidos = strip_tags($_REQUEST['nombreApellidos']);
                             $pass = strip_tags($_REQUEST['pass']);
+                            $pass = md5($pass);
                             $user = strip_tags($_REQUEST['user']);
                             $date = date('Y-m-d H:i:s');
                             $biografia = strip_tags($_REQUEST['biografia']);
-                            $hashed_password = password_hash($pass, PASSWORD_DEFAULT);
                             if ($_FILES['fileHidden']['name'] == "") {
                                 $image = "../images/cuentaHuevo.png";
                             } else {
@@ -125,7 +120,7 @@
                             $user = preg_replace("/@/", "", $user);
 
                             $contenido_imagen = base64_encode(file_get_contents($image));
-                            $sql = "INSERT INTO usuarios(nombre_apellidos, fecha_ini, user, email, pass, biografia, foto) VALUES ('$nombreApellidos', '$date', '$user', '$email','$hashed_password','$biografia','$contenido_imagen');";
+                            $sql = "INSERT INTO usuarios(nombre_apellidos, fecha_ini, user, email, pass, biografia, foto) VALUES ('$nombreApellidos', '$date', '$user', '$email','$pass','$biografia','$contenido_imagen');";
                             if (!mysqli_query($mysqli, $sql)) {
                                 die("Error: " . mysqli_error($mysqli));
                             }
