@@ -10,3 +10,10 @@ textarea {
   cursor: pointer;
 }
 
+#nombreFichero {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 380px;
+  margin-left: 10px;
+}

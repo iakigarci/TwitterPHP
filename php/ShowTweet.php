@@ -16,6 +16,3 @@ echo "<p class='card-text'> " .$row['texto']. " </p>";
 echo '</div>';
 echo '</div>';
 echo '</div>';
-
-?>
-

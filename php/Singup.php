@@ -16,26 +16,26 @@
                         <form id="myForm" method="post" action="Singup.php" role="form" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="dirCorreo">Email</label>
-                                <input type="email" class="form-control" name="dirCorreo" id="dirCorreo" placeholder="correo@ejemplo.com">
+                                <input type="email" class="form-control" name="dirCorreo" id="dirCorreo" maxlength="30" placeholder="correo@ejemplo.com" requiered>
                             </div>
                             <div class="form-group">
                                 <label for="pass">Password</label>
-                                <input type="password" class="form-control" name="pass" id="pass">
+                                <input type="password" class="form-control" name="pass" id="pass" maxlength="30" requiered>
                             </div>
                             <div class="form-group">
                                 <label for="nombreApellidos">Nombre y Apellidos</label>
-                                <input type="text" class="form-control" name="nombreApellidos" id="nombreApellidos" placeholder="Pablo Emilio Gavirria">
+                                <input type="text" class="form-control" name="nombreApellidos" id="nombreApellidos" maxlength="30" placeholder="Alvaro Riaño Santamaria" requiered>
                             </div>
                             <div class="form-group">
                                 <label for="user">Usuario</label>
                                 <div class="input-group-prepend ">
                                     <span class="input-group-text" id="basic-addon1">@</span>
-                                    <input type="text" class="form-control" id="user" name="user" placeholder="jackDorsey76">
+                                    <input type="text" class="form-control" id="user" name="user" placeholder="jackDorsey76" maxlength="10" requiered>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="biografia">Biografia</label>
-                                <textarea id="biografia" name="biografia" class="md-textarea form-control" rows="3"></textarea>
+                                <textarea id="biografia" name="biografia" class="md-textarea form-control" rows="3" maxlength="30" ></textarea>
                                 <small id="biografiaHelp" class="form-text text-muted">Texto explicativo del usuario con máximo 30 carácteres.</small>
                             </div>
                             <!-- <div class="form-group ">
@@ -65,7 +65,9 @@
                             $regexNombre = "/(\w.+\s).+/";
                             $regexPass = "/^.{6,}$/";
                             $regexBiografia = "/^.{1,30}$/";
-                            $errorPass = "La contraseña tiene que tener 6 carácteres.<br>";
+                            
+
+                            $errorPass = "La contraseña tiene que tener más de 6 carácteres.<br>";
                             $errorBiografia = "La biografia tiene que tener entre 0  y 30 carácteres.<br>";
                             $errorNombre = "Debes introducir tu nombre y al menos un apellido.<br>";
                             //Boolean para saber si introducir consilta SQL o no.
