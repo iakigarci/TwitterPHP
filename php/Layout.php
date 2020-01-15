@@ -11,6 +11,7 @@
 <body>
     <?php include '../html/Header.html' ?>
     <?php include 'GetUserFoto.php'; ?>
+    <?php $_SESSION['time']  = date("Y-m-d H:i:s, strtotime( '-2 days' ) "); ?>
     <div class="container">
         <div class="row">
             <div class="col-md-3">

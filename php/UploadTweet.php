@@ -1,18 +1,13 @@
-<?php include '../php/Seguridad.php' ?>
+<?php include 'Seguridad.php'; ?>
+<?php include 'GetUserByEmail.php'; ?>
 <?php
 if (isset($_REQUEST['tweetUsuario'])) {
+    $ID_usuario = getUserByID($_SESSION['email']);
     include 'ConnectionDB.php';
     $email = $_SESSION['email'];
     $fecha = date("Y-m-d H:i:s");
     $texto = $_REQUEST['tweetUsuario'];
-    $sql = "SELECT ID FROM usuarios WHERE email='$email'";
-    $resul = mysqli_query($mysqli,$sql, MYSQLI_USE_RESULT);
-    if(!$resul){
-        die("Error: ".mysqli_error($mysqli));
-    }
-    $ID_usuario = mysqli_fetch_array($resul);
-    $ID_usuario = $ID_usuario[0];
-    print_r($ID_usuario);
+    
     if ($_FILES['mediaTweet']['name'] == "") {
         //No se introduce nada
         $sql = "INSERT INTO tweet(ID_usuario, fecha, texto) VALUES ('$ID_usuario', '$fecha', '$texto')";
@@ -24,10 +19,6 @@ if (isset($_REQUEST['tweetUsuario'])) {
 
     if (!mysqli_query($mysqli, $sql)) {
         die("Error: " . mysqli_error($mysqli));
-    } else {
-        echo "<script>
-        alert('Se ha insertado el tweet perfectamente.');
-        </script>";
     }
     $mysqli->close();
 }

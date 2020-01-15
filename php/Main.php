@@ -1,3 +1,4 @@
+<!-- Tweet del usuario -->
 <div class="card tweet">
     <div class="card-body">
         <div class="d-flex align-items-center">
@@ -24,18 +25,23 @@
             <div class="btn-toolbar justify-content-between">
                 <div class="btn-group adjuntar">
                     <label for="mediaTweet">
-                        <img src="../images/adjuntar.png" width="20" height="20" >
+                        <img src="../images/adjuntar.png" width="20" height="20">
                     </label>
-                    <input type="file" id="mediaTweet" name="mediaTweet" >
+                    <input type="file" id="mediaTweet" name="mediaTweet">
                 </div>
                 <div class="btn-group">
                     <button type="button" id="submitTweet" name="submitTweet" class="btn btn-primary" onclick="sendTweet()">Publicar</button>
                 </div>
             </div>
         </form>
+        <div id="gif_upload" class="text-center">
+            <img src="../images/tweet_subido.gif" width="100" height="70">
+        </div>
     </div>
 </div>
-<div class="card lista-tweet">
+
+<!-- Lista de Tweets de otros usuarios -->
+<div class="card" id="lista-tweet">
     <div class="card-body">
         <h5 class="card-title" id="nombre_apellidos"></h5>
         <h6 class="card-subtitle mb-2 text-muted"></h6>
