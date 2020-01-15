@@ -2,12 +2,11 @@ textarea {
   resize: none;
 }
 
-.adjuntar > input
-{
-    display: none;
+.adjuntar > input {
+  display: none;
 }
 
-.adjuntar img
-{
-    cursor: pointer;
+.adjuntar img {
+  cursor: pointer;
 }
+

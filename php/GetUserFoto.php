@@ -6,13 +6,8 @@
         if(!$resul){
             die("Error: ".mysqli_error($mysqli));
         }
-
-        while($row = mysqli_fetch_array($resul)){
-            if($row['media']==""){
-                include 'ShowTweet.php';
-            }else{
-                include 'ShowTweetWithImage.php';
-            }
-        }
+        $img = mysqli_fetch_array($resul);
+        $mysqli->close();
+        return $img[0];
     }
 ?>  

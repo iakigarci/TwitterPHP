@@ -41,10 +41,8 @@
 </div>
 
 <!-- Lista de Tweets de otros usuarios -->
-<div class="card" id="lista-tweet">
-    <div class="card-body">
-        <h5 class="card-title" id="nombre_apellidos"></h5>
-        <h6 class="card-subtitle mb-2 text-muted"></h6>
-        <p class="card-text"></p>
+<div class="card" >
+    <div class="card-body" id="lista-tweet">
+        
     </div>
 </div>
