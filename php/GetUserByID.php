@@ -1,7 +1,7 @@
 <?php
-function getUserByEmail($email){
+function getUserByID($ID){
     include 'ConnectionDB.php';
-    $sql = "SELECT * FROM usuarios WHERE email='$email'";
+    $sql = "SELECT * FROM usuarios WHERE ID='$ID'";
     $resul = mysqli_query($mysqli,$sql, MYSQLI_USE_RESULT);
     if(!$resul){
         die("Error: ".mysqli_error($mysqli));

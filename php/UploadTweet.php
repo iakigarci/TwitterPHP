@@ -1,8 +1,10 @@
 <?php include 'Seguridad.php'; ?>
 <?php include 'GetUserByEmail.php'; ?>
+
 <?php
 if (isset($_REQUEST['tweetUsuario'])) {
-    $ID_usuario = getUserByID($_SESSION['email']);
+    $usuario = getUserByEmail($_SESSION['email']);
+    $ID_usuario = $usuario['ID'];
     include 'ConnectionDB.php';
     $email = $_SESSION['email'];
     $fecha = date("Y-m-d H:i:s");

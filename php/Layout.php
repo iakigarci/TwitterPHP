@@ -20,7 +20,7 @@
     ?>
     <div class="container">
         <div class="row">
-            <div class="col-md-3" style="position: sticky" id="div-usuario">
+            <div class="col-md-3" id="div-usuario">
                 <div class="card">
                     <?php include '../php/Navbar.php' ?>
                 </div>
