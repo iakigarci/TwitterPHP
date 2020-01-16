@@ -1,6 +1,6 @@
 $(document).ready(function() {
   loadTweets();
-  setInterval(loadTweets, 5000);
+  setInterval(loadTweets, 15000);
   $("#submitTweet").click(loadTweets);
 });
 

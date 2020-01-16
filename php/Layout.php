@@ -7,6 +7,7 @@
     <script src="../js/AddImage.js"></script>
     <script src="../js/SendTweetAjax.js"></script>
     <script src="../js/LoadTweets.js"></script>
+    <script src="../js/LoadTrending.js"></script>
 </head>
 
 <body>
@@ -25,7 +26,7 @@
             </div>
 
             <div class="col-md-3" id="div-otros">
-                <div class="card">
+                <div class="card" id="trending">
                     <h1>sd</h1>
                 </div>
             </div>
