@@ -1,5 +1,7 @@
 $(document).ready(function() {
   loadTweets();
+  setInterval(loadTweets, 5000);
+  $("#submitTweet").click(loadTweets);
 });
 
 function loadTweets() {
@@ -10,8 +12,10 @@ function loadTweets() {
     cache: false,
     success: function(data) {
       console.log("success");
-      console.log(data);
       $(data).insertAfter("#lista-tweet");
+      $("p").html(function(_, html) {
+        return html.replace(/(\#\w+)/g, '<span class="blue">$1</span>');
+      });
     },
     error: function() {
       console.log("fail");

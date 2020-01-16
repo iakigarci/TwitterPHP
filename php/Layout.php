@@ -12,12 +12,6 @@
 <body>
     <?php include '../html/Header.html' ?>
     <?php include 'GetUserFoto.php'; ?>
-    <?php
-    $fechaHoy = date("Y-m-d H:i:s");
-    $nuevaFecha = strtotime ( '-2 day' , strtotime ( $fechaHoy ) ) ;
-    $nuevaFecha = date("Y-m-d H:i:s", $nuevaFecha);
-    $_SESSION['time'] = $nuevaFecha;
-    ?>
     <div class="container">
         <div class="row">
             <div class="col-md-3" id="div-usuario">

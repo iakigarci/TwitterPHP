@@ -4,6 +4,7 @@ include 'ConnectionDB.php';
 include 'GetUserFoto.php'; 
 include 'GetUserByEmail.php'; 
 include 'GetUserByID.php';
+include 'SetTime.php';
 $tiempo = $_SESSION['time'];
 
 $sql = "SELECT * FROM tweet WHERE fecha > '" .$tiempo. "' ORDER BY fecha DESC";

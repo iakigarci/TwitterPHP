@@ -12,7 +12,7 @@ echo "<div class='h7 text-muted'> @" .$usuario['user']." </div>";
 echo '</div>';
 echo '</div>';
 echo '<div class="texto-tweet px-2 my-2 ml-5">';
-echo "<p class='card-text'> " .$row['texto']. " </p>";
+echo "<p class='card-text id='texto-tweet'> " .$row['texto']. " </p>";
 echo '</div>';
 echo '</div>';
 echo '</div>';
