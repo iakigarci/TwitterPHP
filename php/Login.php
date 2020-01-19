@@ -30,7 +30,7 @@
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
                             <div class="text-center">
-                                <a href="../php/Singup.php">No tengo cuenta</a>
+                                <a href="../php/Signup.php">No tengo cuenta</a>
                             </div>
                         </form>
                         <div class="errores" style="color:red; background-color: #ff9999 ">

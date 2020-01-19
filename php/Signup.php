@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <h5 class="card-title text-center">Registro</h5>
                     <div class="card-title">
-                        <form id="myForm" method="post" action="Singup.php" role="form" method="post" enctype="multipart/form-data">
+                        <form id="myForm" method="post" action="Signup.php" role="form" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="dirCorreo">Email</label>
                                 <input type="email" class="form-control" name="dirCorreo" id="dirCorreo" maxlength="30" placeholder="correo@ejemplo.com" requiered>
@@ -56,6 +56,9 @@
                             </div>
                             <div class="text-center mb-2">
                                 <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                            <div class="text-center">
+                                <a href="../php/Login.php">Ya tengo cuenta</a>
                             </div>
                         </form>
                     </div>
