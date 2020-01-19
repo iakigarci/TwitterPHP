@@ -4,7 +4,7 @@ $ConsumerSecretAPISecret="FAbpadIlU2pEUq3Wnofza4pnS62w7vl2TCZVuownjViFo0YA16";
 $access_token = "1066992945822339072-K15rJgOvn1p2IsyryOZh24OjM79Rml";
 $access_token_secret = "HTbIM0CsDLCpAREOvRC5V8PQ7WJoIb2Udc9QEErVEsK3f";
 
-$NumberOfTags=20; //keep as minimum as possible
+$NumberOfTags=15; //keep as minimum as possible
 $GeoLocleID="20070458";
 require "../twitteroauth/autoload.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
@@ -25,6 +25,7 @@ foreach($statues as $hash)
         $value="#".$value;
         }
         $stringgerr.=str_replace(" ","_",$value)." ";
+        echo "<li class='list-group-item'> $i - $value</li>";
         
         if($i==$NumberOfTags)
         break;
@@ -33,4 +34,4 @@ foreach($statues as $hash)
     if($i==$NumberOfTags)
         break;
 }
-echo $stringgerr;
+

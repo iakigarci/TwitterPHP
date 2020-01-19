@@ -8,6 +8,7 @@
     <script src="../js/SendTweetAjax.js"></script>
     <script src="../js/LoadTweets.js"></script>
     <script src="../js/LoadTrending.js"></script>
+    <script src="../js/CountUsers.js"></script>
 </head>
 
 <body>
@@ -27,7 +28,12 @@
 
             <div class="col-md-3" id="div-otros">
                 <div class="card" id="trending">
-                    <h1>sd</h1>
+                    <div class="card-header" id="trending-header">
+                        Trending
+                    </div>
+                    <ul class="list-group list-group-flush" id="trending-list">
+
+                    </ul>
                 </div>
             </div>
         </div>

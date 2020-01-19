@@ -32,7 +32,7 @@
                     <p id="nombreFichero" maxlength="20"></p>
                 </div>
                 <div class="btn-group">
-                    <button type="button" id="submitTweet" name="submitTweet" class="btn btn-primary" onclick="sendTweet()">Publicar</button>
+                    <button type="button" id="submitTweet" name="submitTweet" class="btn btn-primary" onclick="sendTweet();loadTweets('1')">Publicar</button>
                 </div>
             </div>
         </form>
@@ -44,6 +44,10 @@
 
 <!-- Lista de Tweets de otros usuarios -->
 <div class="card" >
+    <button type="button" id="updateTweets" name="updateTweets" class="btn btn-primary" onclick="loadTweets('1')">Actualizar</button>
+    <div id="gif_updated" class="text-center">
+            <img src="../images/loading.gif" width="100" height="100">
+        </div>
     <div class="card-body" id="lista-tweet">
         
     </div>

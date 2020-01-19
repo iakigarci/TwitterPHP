@@ -1,6 +1,6 @@
 $(document).ready(function() {
   loadTrending();
-  setInterval(loadTrending, 50000);
+  setInterval(loadTrending, 5000);
 });
 
 function loadTrending() {
@@ -10,9 +10,12 @@ function loadTrending() {
     async: false,
     cache: false,
     success: function(data) {
-      console.log("success");
-      console.log(data);
-      $(data).insertAfter("#trending");
+      $("#trending-list").empty();
+      /* $(
+        '<ul class="list-group list-group-flush" id="trending-list"></ul>'
+      ).insertAfter("#trending-header");
+      console.log(data); */
+      $("#trending-list").append(data);
     },
     error: function() {
       console.log("fail");

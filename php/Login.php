@@ -63,7 +63,7 @@
                                     $_SESSION['biografia'] = $row['biografia'];
                                     echo "<script>
                                         alert('Inicio de sesion realizado correctamente. Pulsa aceptar para acceder a la pantalla principal.');
-                                        window.location.href='Layout.php';
+                                        window.location.href='IncrementCounter.php';
                                         </script>";
                                 } else {
                                     $_SESSION['identificado'] = "NO";
