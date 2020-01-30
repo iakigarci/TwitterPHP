@@ -1,5 +1,5 @@
 <?php
-include 'DbConfig.php';
+include 'DBConfig.php';
 //Creamos la conexion con la BD.
 $mysqli = mysqli_connect($server, $user, $pass, $basededatos);
 if (!$mysqli) {

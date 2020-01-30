@@ -1,6 +1,6 @@
 $(document).ready(function() {
   loadTrending();
-  setInterval(loadTrending, 5000);
+  setInterval(loadTrending, 50000);
 });
 
 function loadTrending() {
