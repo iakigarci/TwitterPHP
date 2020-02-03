@@ -1,6 +1,6 @@
 $(document).ready(function() {
   howManyConnected();
-  setInterval(howManyConnected(), 60000);
+  setInterval(howManyConnected(), 30000);
 });
 
 function howManyConnected() {

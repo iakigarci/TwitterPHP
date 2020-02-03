@@ -2,7 +2,7 @@ $(document).ready(function() {
   loadTweets("0");
   setInterval(function() {
     loadTweets("1");
-  }, 60000);
+  }, 30000);
   /* $("#submitTweet").click(loadTweets("1")); */
 });
 
