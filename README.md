@@ -57,6 +57,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+![alt text](Twitter.PNG)
+
 Website with the aim of imitating some of the features that twitter has. Some of the functionalities have been realized using the official twitter API. Some of the features that are included:
 
 - Create a profile
