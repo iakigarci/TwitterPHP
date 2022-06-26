@@ -3,12 +3,12 @@
 <br />
 <div align="center">
 
-  <h1 align="center">Best-README-Template</h1>
+  <h1 align="center">Twitter copy</h1>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    A copy of Twitter coded in PHP
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <!--<a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>/>
     <!--<br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
@@ -57,7 +57,21 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+Website with the aim of imitating some of the features that twitter has. Some of the functionalities have been realized using the official twitter API. Some of the features that are included:
+
+- Create a profile
+- Tweet
+- Upload phot (profile pic or content for a tweet)
+- Trendings (also called TT)
+- Usage of hastag #
+- Whatch real concurrent users, updated every minute
+
+Otherwise, there are some main funcionalities that are not included, but it will be easy to add them because the PHP backend is made following a modular design:
+
+- RT and Like
+- Interact with other users
+- Select diferent languages
+- Others...
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -75,18 +89,20 @@ The technologies used for this project are as follows:
 <!-- DOCKER <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="40" height="40"/>-->
 <!-- KUBERNETS  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" width="40" height="40"/>-->
 <!-- JAVA <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="40" height="40"/>-->
-<!-- JS <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" height="40"/>-->
+<!-- JS --><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" height="40"/>
 <!-- Node <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" height="40"/>-->
 <!-- EX <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="40" height="40"/>-->
 <!-- TS <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width="40" height="40"/>-->
 <!-- React <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40"/>-->
 <!-- Mongo <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="40" height="40"/>-->
 <!-- PYTHON <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40"/>-->
-<!--  <img src="" width="40" height="40"/>-->
-<!--  <img src="" width="40" height="40"/>-->
-<!--  <img src="" width="40" height="40"/>-->
-<!--  <img src="" width="40" height="40"/>-->
-<!--  <img src="" width="40" height="40"/>-->
+ 
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="40" height="40"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" height="40"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" height="40"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="40" height="40"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg" width="40" height="40"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" width="40" height="40"/>
 </p>      
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -99,43 +115,7 @@ The technologies used for this project are as follows:
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
+There are different options to host the website. In my case, I used XAMPP which is a free cross-platform web server. 
 
 
 <!-- ROADMAP -->
@@ -187,7 +167,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Iñaki García 
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/iakigarci/)
+Project Link: [https://github.com/iakigarci/TwitterPHP](https://github.com/iakigarci/TwitterPHP)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
