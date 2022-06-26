@@ -67,6 +67,7 @@ Website with the aim of imitating some of the features that twitter has. Some of
 - Trendings (also called TT)
 - Usage of hastag #
 - Whatch real concurrent users, updated every minute
+- Authentification with TwitterOAuth
 
 Otherwise, there are some main funcionalities that are not included, but it will be easy to add them because the PHP backend is made following a modular design:
 
